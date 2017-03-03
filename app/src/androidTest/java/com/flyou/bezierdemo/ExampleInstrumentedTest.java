@@ -1,4 +1,4 @@
-package com.flyou.bezierviewdemo;
+package com.flyou.bezierdemo;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.flyou.bezierviewdemo", appContext.getPackageName());
+        assertEquals("com.flyou.bezierdemo", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.flyou.bezierviewdemo.widget;
+package com.flyou.bezierdemo.widget;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Path;
 import android.graphics.Point;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 
 /**
@@ -15,24 +16,26 @@ import android.view.View;
  * Desc:
  */
 
-public class BezierView1 extends View {
+public class BezierView2 extends View {
     private Path mPath;
     private Point mStartPoint;
     private Point mEndPoint;
     private Point mContralPoint;
+    private int mControlX=0;
+    private int mControlY=0;
     private Paint mPaint;
+    private int viewSize;
 
-    private int sizelenth;
 
-    public BezierView1(Context context) {
+    public BezierView2(Context context) {
         this(context, null);
     }
 
-    public BezierView1(Context context, AttributeSet attrs) {
+    public BezierView2(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public BezierView1(Context context, AttributeSet attrs, int defStyleAttr) {
+    public BezierView2(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
     }
@@ -53,8 +56,8 @@ public class BezierView1 extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         mStartPoint = new Point(0, 0);
-        mEndPoint = new Point(sizelenth, sizelenth);
-        mContralPoint = new Point(sizelenth, 0);
+        mEndPoint = new Point(viewSize, viewSize);
+        mContralPoint = new Point(mControlX, mControlY);
         mPath=new Path();
         mPath.moveTo(mStartPoint.x,mStartPoint.y);
         mPath.quadTo(mContralPoint.x,mContralPoint.y,mEndPoint.x,mEndPoint.y);
@@ -68,8 +71,21 @@ public class BezierView1 extends View {
         int height = getDefaultSize(getSuggestedMinimumHeight(),
                 heightMeasureSpec);
         int width = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
-        sizelenth = Math.min(width, height) ;
-        setMeasuredDimension(sizelenth,sizelenth);
+        viewSize= mControlX = Math.min(width, height) ;
+        setMeasuredDimension(viewSize,viewSize);
 
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+            case MotionEvent.ACTION_MOVE:
+                mControlX = (int) event.getX();
+                mControlY = (int) event.getY();
+                invalidate();
+                break;
+        }
+        return true;
     }
 }

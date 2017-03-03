@@ -1,4 +1,4 @@
-package com.flyou.bezierviewdemo;
+package com.flyou.bezierdemo;
 
 import org.junit.Test;
 

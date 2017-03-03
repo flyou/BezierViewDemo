@@ -5,10 +5,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-
-
+        tools:context="com.flyou.bezierviewdemo.BezierView1Activity"
         >
-    <com.flyou.bezierdemo.widget.BezierView2
+    <com.flyou.bezierviewdemo.widget.BezierView1
             android:background="@android:color/darker_gray"
             android:layout_width="300dp"
             android:layout_height="300dp"

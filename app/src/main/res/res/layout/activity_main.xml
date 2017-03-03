@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.flyou.bezierviewdemo.MainActivity"
+        android:orientation="vertical"
+        >
+
+    <Button
+            android:text="beizerview1"
+            android:id="@+id/beizerview1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    <Button
+            android:text="beizerview2"
+            android:id="@+id/beizerview2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    <Button
+            android:text="beizerview3"
+            android:id="@+id/beizerview3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    <Button
+            android:text="beizerview4"
+            android:id="@+id/beizerview4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+</LinearLayout>

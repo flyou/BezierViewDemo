@@ -1,2 +1,0 @@
-# BezierViewDemo
-BezierViewDemo
