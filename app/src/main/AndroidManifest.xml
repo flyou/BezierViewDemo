@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.flyou.bezierdemo">
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -15,7 +16,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".BezierView1Activity" />
-        <activity android:name=".BezierView2Activity"></activity>
+        <activity android:name=".BezierView2Activity" />
+        <activity android:name=".BezierView3Activity" />
+        <activity android:name=".BezierView4Activity"></activity>
     </application>
 
 </manifest>

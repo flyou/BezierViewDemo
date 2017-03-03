@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 intent.setClass(MainActivity.this, BezierView2Activity.class);
                 break;
             case R.id.beizerview3:
-                intent.setClass(MainActivity.this, BezierView1Activity.class);
+                intent.setClass(MainActivity.this, BezierView3Activity.class);
                 break;
             case R.id.beizerview4:
-                intent.setClass(MainActivity.this, BezierView1Activity.class);
+                intent.setClass(MainActivity.this, BezierView4Activity.class);
                 break;
         }
         startActivity(intent);

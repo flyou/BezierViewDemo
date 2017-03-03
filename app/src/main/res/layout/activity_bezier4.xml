@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.flyou.bezierdemo.widget.heartview.HeartView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_bezier4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        tools:context="com.flyou.bezierdemo.BezierView4Activity"
+        >
+
+</com.flyou.bezierdemo.widget.heartview.HeartView>
