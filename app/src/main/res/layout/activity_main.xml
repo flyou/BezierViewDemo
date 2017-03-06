@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
 
-        tools:context="com.flyou.bezierviewdemo.MainActivity"
+
         android:orientation="vertical"
         >
 
@@ -30,6 +30,11 @@
     <Button
             android:text="beizerview4"
             android:id="@+id/beizerview4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            /><Button
+            android:text="beizerview5"
+            android:id="@+id/beizerview5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />

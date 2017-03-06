@@ -4,8 +4,11 @@
         android:id="@+id/activity_bezier4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         tools:context="com.flyou.bezierdemo.BezierView4Activity"
         >
-
+<Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </com.flyou.bezierdemo.widget.heartview.HeartView>

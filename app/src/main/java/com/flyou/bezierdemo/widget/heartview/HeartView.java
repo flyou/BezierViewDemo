@@ -71,7 +71,7 @@ public class HeartView extends RelativeLayout{
         mPaint = new Paint();
 
         mPaint.setAntiAlias(true);
-        mPaint.setDither(true);
+
         mPaint.setStrokeWidth(10);
         mRandom = new Random();
 
@@ -85,7 +85,7 @@ public class HeartView extends RelativeLayout{
 
     private void initPoint() {
         mStartPoint.x = getMeasuredWidth() / 2;
-        mStartPoint.y = getMeasuredHeight() - 10;
+        mStartPoint.y = getMeasuredHeight() - 20;
 
         mEndPoint.y = 10;
         mEndPoint.x = getMeasuredWidth() / 2;
