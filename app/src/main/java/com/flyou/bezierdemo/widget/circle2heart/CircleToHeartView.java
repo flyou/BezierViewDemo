@@ -1,4 +1,4 @@
-package com.flyou.bezierdemo.widget.circle;
+package com.flyou.bezierdemo.widget.circle2heart;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -15,7 +15,7 @@ import android.view.View;
  * Desc:
  */
 
-public class BezierCircleView extends View {
+public class CircleToHeartView extends View {
     private Path mPath;
     private Point mStartPoint;
     private Point mEndPoint;
@@ -26,19 +26,19 @@ public class BezierCircleView extends View {
 
     private int r;
 
-    public BezierCircleView(Context context) {
+    public CircleToHeartView(Context context) {
         super(context);
         init();
         setWillNotDraw(false);
     }
 
-    public BezierCircleView(Context context, AttributeSet attrs) {
+    public CircleToHeartView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init();
         setWillNotDraw(false);
     }
 
-    public BezierCircleView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public CircleToHeartView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init();
         setWillNotDraw(false);
@@ -59,22 +59,18 @@ public class BezierCircleView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         canvas.translate(r, r);
-        r=r-(int)mPaint.getStrokeWidth();
+        r = r - (int) mPaint.getStrokeWidth();
         initPoint();
         mPath = new Path();
         mPath.moveTo(mStartPoint.x, mStartPoint.y);
-        for (int index=0;index<4;index++){
-        mPath.cubicTo(mContral1Point.x, mContral1Point.y, mContral2Point.x, mContral2Point.y, mEndPoint.x, mEndPoint.y);
-            if (index<3) {
+        for (int index = 0; index < 4; index++) {
+            mPath.cubicTo(mContral1Point.x, mContral1Point.y, mContral2Point.x, mContral2Point.y, mEndPoint.x, mEndPoint.y);
+            if (index <= 3) {
                 roatePoint90();
             }
-
         }
         mPath.close();
         canvas.drawPath(mPath, mPaint);
-
-
-
     }
 
     private void initPoint() {
@@ -96,19 +92,19 @@ public class BezierCircleView extends View {
     }
 
     private void roatePoint90() {
-        Point tempPoint=new Point(mStartPoint);
+        Point tempPoint = new Point(mStartPoint);
         mStartPoint.x = -tempPoint.y;
         mStartPoint.y = tempPoint.x;
 
-        tempPoint=new Point(mEndPoint);
+        tempPoint = new Point(mEndPoint);
         mEndPoint.x = -tempPoint.y;
         mEndPoint.y = tempPoint.x;
 
-        tempPoint=new Point(mContral1Point);
+        tempPoint = new Point(mContral1Point);
         mContral1Point.x = -tempPoint.y;
         mContral1Point.y = tempPoint.x;
 
-        tempPoint=new Point(mContral2Point);
+        tempPoint = new Point(mContral2Point);
         mContral2Point.x = -tempPoint.y;
         mContral2Point.y = tempPoint.x;
 

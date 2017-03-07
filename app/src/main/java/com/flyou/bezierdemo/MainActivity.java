@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     Button beizerview4;
     @InjectView(R.id.beizerview5)
     Button beizerview5;
+    @InjectView(R.id.beizerview6)
+    Button beizerview6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         ButterKnife.inject(this);
     }
 
-    @OnClick({R.id.beizerview1, R.id.beizerview2, R.id.beizerview3, R.id.beizerview4, R.id.beizerview5})
+    @OnClick({R.id.beizerview1, R.id.beizerview2, R.id.beizerview3, R.id.beizerview4, R.id.beizerview5, R.id.beizerview6})
     public void onClick(View view) {
         Intent intent = new Intent();
         switch (view.getId()) {
@@ -48,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.beizerview5:
                 intent.setClass(MainActivity.this, BezierView5Activity.class);
+                break;
+            case R.id.beizerview6:
+                intent.setClass(MainActivity.this, BezierView6Activity.class);
                 break;
         }
         startActivity(intent);

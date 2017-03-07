@@ -32,9 +32,17 @@
             android:id="@+id/beizerview4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            /><Button
+            />
+    <Button
             android:text="beizerview5"
             android:id="@+id/beizerview5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    <Button
+            android:text="beizervie6"
+            android:id="@+id/beizerview6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             />
